@@ -9,7 +9,9 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
-    res.send(err);
+    var e404 = "";
+    res.writeHead(404);
+    res.send(e404);
 });
 
 app.get('/about', function (req, res) {
